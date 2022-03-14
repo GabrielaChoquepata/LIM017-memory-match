@@ -2,11 +2,91 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+    <input id="music" type="image" src="img/iconMusic.png" width="40px" height="40px" class="reproductor">
+
+    <!-- VISTA 1 -->
+    <section  id="W1" class= "containerW1" style="display:block" >
+      <main>
+        <figure class="logoA"><img src="./img/logoPrincipal.png" width="127%" height="50%"/></figure>
+        <figure class="logoB"><img src="./img/FamilySimpson.png" width="100%"/></figure>
+        <div class="welcomeWorld">
+          <br><br>
+          <h1>BIENVENIDX</h1>
+          <h1>. . .</h1><br>
+          <button type="button" id="btnmostrarW2">INICIAR LA AVENTURA</button>
+          <br>
+        </div>
+      </main>
+    </section>
+
+    <!-- VISTA 2 -->
+    <section id="W2" class= "containerW2" style="display:none">
+      <div>
+        <figure class="logoA"><img src="./img/logoPrincipal.png" width="127%"/></figure>
+      </div>
+
+      <div class="homePage">
+        <div class="user">
+          <!-- <figure class="logoC"><img src="./img/bart.png" width="70%"/></figure> -->
+          <h2>Escribe tu nombre :</h2>
+          <input type="text" id="username" name="username"/><br><br>
+          <button type="button" id="btnmostrarW3">JUGAR</button>
+        </div>
+
+        <!-- <nav>
+          <ol class="nav-menu">
+          <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">PRIVACIDAD</a></li>
+          <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">TWITTER</a></li>
+          <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">INSTAGRAM</a></li>
+          <li class="nav-menu-item">
+          <a href="#" class="nav-menu-link nav-link">DISCORD</a></li>
+          </ol>
+        </nav> -->
+
+        <div class="gameRulers">
+          <br>
+          <h2>COMO JUGAR</h2>
+          <br>El juego comienza con una serie de cartas dispuestas boca abajo en un orden diverso, se voltearán sucesivamente dos cartas, buscando el par de cada personaje de los Simpsons <br> ¡Tu mejor herramienta será tu super memoria, asi que hay vamos!
+          ¡EMPECEMOS!<br><br>
+        </div>
+      </div>
+    </section>
+
+
+    <section id= "W3" class="containerW3" style="display:none">
+        <div>
+          <p id="personalised message"></p><br>
+        </div>
+        <div class="memory-game">
+          <section class="memory-cards">
+            <div id="root"></div>
+          </section>
+
+          <section class="infoGame">
+            <div id="timer" class="timer" value="" finish="false">00:00</div>
+          </section>
+        </div>
+    </section>
+
+
+    <!-- <section class="containerW4">
+      <div id= "W4" style="display:none">
+        <br><br>
+        <h1>¡FIN DE LA PARTIDA!<br>Juego completado</h1>
+        <button type="button" id="btnmostrarW2">VOLVER A EMPEZAR</button>
+        <br>
+      </div>
+    </section> -->
+
     <script src="main.js" type="module"></script>
   </body>
 </html>

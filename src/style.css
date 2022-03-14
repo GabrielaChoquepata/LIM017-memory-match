@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100vh;
+    overflow: hidden
+}
+
+body{
+    background-image: url("./img/paraCel.gif");
+    background-repeat: no-repeat;
+    cursor: url("./img/cursordefault1.png"), auto;
+    /* overflow: hidden; */
+    background-attachment: fixed;
+}
+
+#music{
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+/* VISTA 1 */
+.containerW1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    margin: 50% 18%;
+}
+
+.logoB{
+    /* z-index: 2; */
+    max-width: 50%;
+    /* border: 1px solid red; */
+    margin:5% 25% -10%;
+}
+
+.welcomeWorld{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Think Big;
+    border-radius: 20px
+}
+
+h1{
+    font-family: Think Big;
+    letter-spacing: 2.1px;
+    color: #f2d307;
+    font-size: 2em;
+    -webkit-text-stroke: 0.1px black;
+    line-height: .3em;
+}
+
+#btnmostrarW2, #btnmostrarW3{
+    display: block;
+    padding: 3px 11px;
+    text-decoration: none;
+    font-family: Think Big;
+    font-size: 17px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #f2d307;
+    border-radius: 6px;
+    border: none;
+}
+
+#btnmostrarW2:hover {
+    background: #f2d307;
+    box-shadow: 0 0 10px #FFD966, 0 0 40px #FFD966, 0 0 80px #FFD966;
+    transition-delay: 0.2s;
+}
+
+
+/* VISTA 2 */
+.containerW2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    margin: 43% 20%;
+    font-family: Think Big;
+}
+
+.homePage{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Think Big;
+    margin:20px -20px;
+    border-radius: 15px
+}
+
+/* .logoC{
+    margin:38px 0px 8px 0px;
+} */
+
+.user{
+    margin:38px 0px 8px 105px;
+}
+
+h2{
+    font-family: Think Big;
+    font-size: 16px;
+    text-align: center;
+}
+
+#username{
+    width:120px;
+    height: 30px;
+    border: none;
+    border-radius:6px;
+    font-family: Think Big;
+    font-size: 14px;
+    color:#f22207;
+    background-color: white;
+}
+
+.gameRulers{
+    background-color: white;
+    text-align: justify;
+    font-size: 11.7px;
+    padding:10px;
+    margin:15px;
+    border-radius: 15px
+}
+
+
+/* VISTA 3 */
+.containerW3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    margin: 43% 20%;
+    font-family: Think Big;
+}
+p{
+    background-color: #f22207;
+    border-radius:6px;
+    width:90px;
+    height: 25px;
+    font-family: Think Big;
+    font-size: 14px;
+    color:#ffffff;
+    text-align: center;
+}
+
+.memory-game{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Think Big;
+    margin:20px -20px;
+    border-radius: 15px
+}
