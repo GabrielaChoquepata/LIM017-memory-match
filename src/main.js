@@ -25,4 +25,6 @@ mostrarCards.addEventListener("click", () => {
     document.getElementById("W2").style.display = "none";
     document.getElementById("W3").style.display = "block";
     document.getElementById("personalised message").innerHTML = (username);
-})
+});
+
+

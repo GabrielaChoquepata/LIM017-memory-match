@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: Think Big;
 }
 
 html{
@@ -9,11 +10,13 @@ html{
 }
 
 body{
-    background-image: url("./img/paraCel.gif");
+    background-image: url("./img/paraPC.gif");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
     cursor: url("./img/cursordefault1.png"), auto;
-    /* overflow: hidden; */
-    background-attachment: fixed;
 }
 
 #music{
@@ -28,16 +31,15 @@ body{
 .containerW1{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 60%;
+    max-width: 60%;
     height: 60%;
     margin: 50% 18%;
 }
 
+
 .logoB{
     /* z-index: 2; */
-    max-width: 50%;
-    /* border: 1px solid red; */
+    margin: auto;
     margin:5% 25% -10%;
 }
 
@@ -45,31 +47,31 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: Think Big;
-    border-radius: 20px
+    border-radius: 20px;
+    padding: 4px 33px;
 }
 
 h1{
-    font-family: Think Big;
     letter-spacing: 2.1px;
     color: #f2d307;
     font-size: 2em;
+    text-align: center;
     -webkit-text-stroke: 0.1px black;
     line-height: .3em;
 }
 
 #btnmostrarW2, #btnmostrarW3{
     display: block;
-    padding: 3px 11px;
+    padding: 2.2% 2%;
     text-decoration: none;
-    font-family: Think Big;
-    font-size: 17px;
+    font-size: 100%;
+    overflow: hidden;
     transition: 0.2s;
     cursor: pointer;
     background-color: #f2d307;
     border-radius: 6px;
     border: none;
+    align-items: center;
 }
 
 #btnmostrarW2:hover {
@@ -78,24 +80,24 @@ h1{
     transition-delay: 0.2s;
 }
 
+.gif1, .gif2{
+    display: none;
+}
+
 
 /* VISTA 2 */
 .containerW2{
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 60%;
     height: 60%;
     margin: 43% 20%;
-    font-family: Think Big;
 }
 
 .homePage{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: Think Big;
     margin:20px -20px;
     border-radius: 15px
 }
@@ -119,7 +121,6 @@ h2{
     height: 30px;
     border: none;
     border-radius:6px;
-    font-family: Think Big;
     font-size: 14px;
     color:#f22207;
     background-color: white;
@@ -139,18 +140,16 @@ h2{
 .containerW3{
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 60%;
     height: 60%;
     margin: 43% 20%;
-    font-family: Think Big;
 }
+
 p{
     background-color: #f22207;
     border-radius:6px;
     width:90px;
     height: 25px;
-    font-family: Think Big;
     font-size: 14px;
     color:#ffffff;
     text-align: center;
@@ -160,8 +159,138 @@ p{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: Think Big;
     margin:20px -20px;
     border-radius: 15px
+}
+
+
+@media only screen and (min-width: 820px) {
+     /* For desktop: */
+    .containerW1{
+        margin: 7% 19%;
+    }
+
+    .logoA{
+        max-width: 32%;
+    }
+
+    .containerW1 .logoB{
+        max-width: 16%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -65px;
+        margin-bottom: -30px ;
+    }
+
+    .welcomeWorld{
+        margin: -5% 30% 0%;
+        padding: 3% 5% 3%;
+    }
+
+    h1{
+        font-size: 4em;
+        -webkit-text-stroke: 0.01px black;
+    }
+
+    .gif1{
+        display: block;
+        position: absolute;
+        left: 9%;
+        top: 43%;
+    }
+
+    .gif2{
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 72%;
+    }
+
+    /* VISTA 2 */
+    .containerW2{
+        margin: 7% 19%;
+        background: rgba(255, 255, 255, 0.4);
+        flex-direction: column;
+        border-radius: 15px
+    }
+
+    .homePage{
+        margin:20px -20px;
+        background: none;
+    }
+
+    /* .logoC{
+        margin:38px 0px 8px 0px;
+    } */
+
+    .user{
+        margin:38px 0px 8px 105px;
+    }
+
+    h2{
+        font-family: Think Big;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #username{
+        width:120px;
+        height: 30px;
+        border: none;
+        border-radius:6px;
+        font-size: 14px;
+        color:#f22207;
+        background-color: white;
+    }
+
+    .gameRulers{
+        background-color: white;
+        text-align: justify;
+        font-size: 11.7px;
+        padding:10px;
+        margin:15px;
+        border-radius: 15px
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 820px) {
+    /* For tablets: */
+    .containerW1{
+        margin: 35% 19%;
+    }
+
+    .containerW1 .logoA{
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .containerW1 .logoB{
+        max-width: 38%;
+        margin-left: center;
+        margin-top: 5%;
+        margin-bottom: -12% ;
+    }
+
+    .welcomeWorld{
+        margin: 1% 15% 2%;
+        padding: 3% 6% 2%;
+        line-height: 2.5em;
+    }
+
+    h1{
+        font-size: 4.5em;
+        -webkit-text-stroke: 0.01px black;
+    }
+
+    #btnmostrarW2, #btnmostrarW3{
+        font-size: 150%;
+    }
+
+    .gif1, .gif2{
+        display: none;
+    }
+
+    /* VISTA 2 */
+    
 }

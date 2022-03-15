@@ -14,13 +14,14 @@
 //   .catch(console.error);
 //
 
-const App = () => {
-  const el = document.createElement('div');
+// import thesimpsons from '../data/thesimpsons/thesimpsons.js';
+// const App = () => {
+//   const el = document.createElement('div');
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+//   el.className = 'App';
+//   el.textContent = 'Hola mundo!';
 
-  return el;
-};
+//   return el;
+// };
 
-export default App;
+// export default App;
