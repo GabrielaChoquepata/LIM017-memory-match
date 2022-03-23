@@ -44,7 +44,7 @@ body{
 }
 
 .welcomeWorld{
-    background-color: white;
+    background: white;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -99,12 +99,14 @@ h1{
     display: flex;
     flex-direction: column;
     margin:20px -20px;
-    border-radius: 15px
+    border-radius: 15px;
 }
 
-/* .logoC{
-    margin:38px 0px 8px 0px;
-} */
+.logoC{
+    position: absolute;
+    left: 65px;
+    top: 335px;
+}
 
 .user{
     margin:38px 0px 8px 105px;
@@ -113,7 +115,7 @@ h1{
 h2{
     font-family: Think Big;
     font-size: 16px;
-    text-align: center;
+    text-align: left;
 }
 
 #username{
@@ -121,7 +123,7 @@ h2{
     height: 30px;
     border: none;
     border-radius:6px;
-    font-size: 14px;
+    font-size: 16px;
     color:#f22207;
     background-color: white;
 }
@@ -146,22 +148,144 @@ h2{
 }
 
 p{
-    background-color: #f22207;
+    background: #f22207;
     border-radius:6px;
+    margin: -5% 30%;
     width:90px;
-    height: 25px;
+    height: 30px;
     font-size: 14px;
     color:#ffffff;
     text-align: center;
 }
 
+.timer{
+    background: #ffffff;
+    border-radius:6px;
+    margin: 5% 30%;
+    width:100px;
+    height: 50px;
+    color:rgb(3, 3, 3);
+    font-size: 14px;
+    text-align: center;
+}
+
+.poster{
+    width: 100%;
+    height: 100%;
+}
+
 .memory-game{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    background: rgb(255, 255, 255);
+    margin:10px -55px;
+    padding: 10px;
+    border-radius: 8px
+}
+
+.container-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    /* background-color: #fff; */
+}
+
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all 1.5s cubic-bezier(0.175, 0.88, 0.32, 1.25);
+}
+
+.front{
+    position: absolute;
+    cursor: pointer;
+    pointer-events: none;
+    backface-visibility: hidden;
+    background: rgba(255, 255, 255, 0.116);
+    transform: rotateY(0deg);
+}
+
+.back{
+    position: absolute;
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.158);
+    transform: rotateY(180deg);
+}
+
+.container-card:hover> .front{
+    transform: rotateY(-180deg);
+}
+
+/* .container-card:hover> .back{
+    transform: rotateY(0deg);
+} */
+
+
+/* .memory-game{
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     margin:20px -20px;
     border-radius: 15px
+} */
+/* 
+.memory-game {
+    background-color: rgba(255, 255, 255, 0.7)
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    border-radius: 15px
+  }
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  } */
 
 
 @media only screen and (min-width: 820px) {

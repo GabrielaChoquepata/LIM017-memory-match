@@ -1,5 +1,5 @@
 export default {
-  name: 'The Simpsons',
+  name: 'thesimpsons',
   items: [
     { id: 'Homero', image: './img/homero.png', bgColor: '#F7DF1E' },
     { id: 'Marge', image: './img/marge.png', bgColor: '#F05032' },

@@ -1,20 +1,5 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+// import thesimpsons from './data/thesimpsons/thesimpsons.js';
 
-// import thesimpsons from '../data/thesimpsons/thesimpsons.js';
 // const App = () => {
 //   const el = document.createElement('div');
 
@@ -24,4 +9,25 @@
 //   return el;
 // };
 
+// function cargarCartas (){
+//     fetch('./data/pokemon/pokemon.json')
+//       .then(resp => resp.json())
+//       .then(resp => console.log (resp))
+// }
+
+// cargarCartas();
+
 // export default App;
+
+
+
+//   .then(resp => resp.json())
+//   .then(console.log)
+
+
+      // return `
+      // <div class="card" style="height:100px">
+      // <div class="face hide" id="flip-face_${cards.id}-1" pokemon-back-id="flip-back_${cards.id}-1"><img src="${cards.image}" height="100" alt="${cards.id}" /></div>
+      // <div class="back show" id="flip-back_${cards.id}-1" pokemon-face-id="flip-face_${cards.id}-1"><img src="img/card-back.png" height="100" /></div>
+      // </div>
+      // <br>
