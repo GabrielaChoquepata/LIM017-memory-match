@@ -1,13 +1,16 @@
 // import App from './components/App.js';
-
 // document.getElementById('root').appendChild(App());
 import thesimpsons from './data/thesimpsons/thesimpsons.js';
-let dataCards = thesimpsons.items
-dataCards = dataCards.concat(dataCards)
+
+//Duplicamos las cartas
+let dataCards = thesimpsons.items;
+dataCards = dataCards.concat(dataCards);
+
+//Aleatorizamos las cartas
 dataCards = dataCards.sort (() => {return Math.random()-0.5});
 console.log(dataCards);
 
-
+//Funcionalidad de la música de fondo
 let boton = document.querySelector(".reproductor")
 boton.addEventListener("click", () => {
     let etiquetaAudio = document.createElement("audio")
@@ -15,12 +18,14 @@ boton.addEventListener("click", () => {
     etiquetaAudio.play()
 });
 
+//Funcionalidad para btn "mostrar vista 2"
 const mostrarW2 = document.getElementById("btnmostrarW2");
 mostrarW2.addEventListener("click", () => {
     document.getElementById("W1").style.display = "none";
     document.getElementById("W2").style.display = "block";
 });
 
+//Funcionalidad para btn "mostrar vista 3"
 const mostrarCards= document.getElementById("btnmostrarW3");
 mostrarCards.addEventListener("click", () => {
     let username = document.getElementById("username").value;
@@ -33,21 +38,28 @@ mostrarCards.addEventListener("click", () => {
 
 
     const game = document.getElementById("tableGame");
-    for(let card of dataCards){
+    for(let item of dataCards){
         game.innerHTML += `
-        <div id='containerCard' class='container-card' name='${card.id}'>
+        <div id='containerCard' class='containerCard' name='${item.id}'>
             <div class= 'card back'>
-            <img src="${card.image}" class= "poster">
+                <img src="${item.image}" class= "poster"/>
             </div>
             <div class='card front'>
-            <img src="img/frontCard.png" class= "poster">
+                <img src="img/frontCard.png" class= "poster"/>
             </div>
-          </div>
+        </div>
         `;
     }
-    console.log(game)
-});
 
+    document.querySelectorAll (".containerCard").forEach (item =>{
+        item.addEventListener ("click", () => {
+            item.classList.toggle("togglecard");
+        })
+    })
+
+    
+
+});
 
 
 
