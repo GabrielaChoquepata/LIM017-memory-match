@@ -26,6 +26,12 @@ body{
     left: 10px;
 }
 
+#home{
+    overflow: hidden;
+    position: absolute;
+    top: 55px;
+    left: 10px;
+}
 
 /* VISTA 1 */
 .containerW1{
@@ -60,7 +66,7 @@ h1{
     line-height: .3em;
 }
 
-#btnmostrarW2, #btnmostrarW3{
+#btnmostrarW2, #btnmostrarW3, #btnregresar{
     display: block;
     padding: 2.2% 2%;
     text-decoration: none;
@@ -137,6 +143,11 @@ h2{
     border-radius: 15px
 }
 
+#btnmostrarW3:hover {
+    background: #f2d307;
+    box-shadow: 0 0 10px #FFD966, 0 0 40px #FFD966, 0 0 80px #FFD966;
+    transition-delay: 0.2s;
+}
 
 /* VISTA 3 */
 .containerW3{
@@ -219,68 +230,44 @@ p{
     align-content: center;
 }
 
-.togglecard{
+.flipCard{
     border: 4px solid blue;
     transform: rotateY(180deg);
 }
 
 
-
-/* .memory-game{
-    background-color: rgba(255, 255, 255, 0.7);
+/* VISTA 4 */
+.containerW4{
     display: flex;
     flex-direction: column;
-    margin:20px -20px;
-    border-radius: 15px
-} */
-/* 
-.memory-game {
-    background-color: rgba(255, 255, 255, 0.7)
-    width: 640px;
-    height: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
-    border-radius: 15px
-  }
-
-.memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    width: 60%;
+    height: 200px;
+    margin: 71% 20%;
+    background: white;
+    border-radius: 12px;
 }
-  
-  .memory-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
-  }
-  
-  .memory-card.flip {
-    transform: rotateY(180deg);
-  }
-  
-  .front-face,
-  .back-face {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background: #1C7CCC;
-    backface-visibility: hidden;
-  }
-  
-  .front-face {
-    transform: rotateY(180deg);
-  } */
 
+h3{
+    font-family: Think Big;
+    font-size: 16px;
+    text-align: center;
+    margin: 7%;
+}
 
+#btnregresar{
+    margin: 10% 27% 5% 27%;
+}
+
+#btnregresar:hover {
+    background: #f2d307;
+    box-shadow: 0 0 10px #FFD966, 0 0 40px #FFD966, 0 0 80px #FFD966;
+    transition-delay: 0.2s;
+}
+
+#footer{
+    color: white;
+    font-size: 11px;
+}
 @media only screen and (min-width: 820px) {
      /* For desktop: */
     .containerW1{

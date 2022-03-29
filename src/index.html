@@ -8,7 +8,8 @@
   </head>
 
   <body>
-    <input id="music" type="image" src="img/iconMusic.png" width="40px" height="40px" class="reproductor">
+    <input id="music" type="image" src="img/iconMusic.png" width="45px" height="40px" class="reproductor"/>
+    <input id="home" type="image" src="img/iconHome.png" width="40px" height="40px" class="home"/>
 
     <!-- VISTA 1 -->
     <section  id="W1" class= "containerW1" style="display:block" >
@@ -35,7 +36,6 @@
 
       <div class="homePage">
         <div class="user">
-          <!-- <figure class="logoC"><img src="./img/bart.png" width="70%"/></figure> -->
           <img class="logoC" src="./img/userGif.gif" width="24%"/>
           <h2>Escribe tu nombre :</h2>
           <input type="text" id="username" name="username"/><br><br>
@@ -74,19 +74,23 @@
           <section class="memory-game" id="tableGame">
             <!-- <div id="cardSimpsons"></div> -->
           </section>
-          <div id="timer" class="timer" value="" finish="false"> <h3>TIEMPO:</h3>00:00</div>
+          <!-- <div id="timer" class="timer" value="" finish="false"> <h3>TIEMPO:</h3>00:00</div> -->
         </section>
     </section>
 
 
-    <!-- <section class="containerW4">
-      <div id= "W4" style="display:none">
+    <section id= "W4" class="containerW4">
+      <div id= "W4">
         <br><br>
-        <h1>¡FIN DE LA PARTIDA!<br>Juego completado</h1>
-        <button type="button" id="btnmostrarW2">VOLVER A EMPEZAR</button>
+        <h3>¡FIN DE LA PARTIDA!<br>Juego completado</h3>
+        <button type="button" id="btnregresar">VOLVER A EMPEZAR</button>
         <br>
       </div>
-    </section> -->
+    </section>
+
+    <footer class="footer">
+      <h3 id="footer">Create by X LABORATORIANS 💛</h3>
+    </footer>
 
     <script src="main.js" type="module"></script>
   </body>
