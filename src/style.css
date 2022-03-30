@@ -33,6 +33,7 @@ body{
     left: 10px;
 }
 
+
 /* VISTA 1 */
 .containerW1{
     display: flex;
@@ -97,7 +98,7 @@ h1{
     flex-direction: column;
     width: 60%;
     height: 60%;
-    margin: 43% 20%;
+    margin: 35% 20%;
 }
 
 .homePage{
@@ -149,13 +150,14 @@ h2{
     transition-delay: 0.2s;
 }
 
+
 /* VISTA 3 */
 .containerW3{
     display: flex;
     flex-direction: column;
     width: 60%;
     height: 60%;
-    margin: 43% 20%;
+    margin: 50% 20%;
 }
 
 p{
@@ -264,10 +266,16 @@ h3{
     transition-delay: 0.2s;
 }
 
+.logoD{
+    margin: -10% 0% -11.7% 35%;
+}
+
 #footer{
     color: white;
     font-size: 11px;
 }
+
+
 @media only screen and (min-width: 820px) {
      /* For desktop: */
     .containerW1{

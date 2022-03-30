@@ -1,14 +1,5 @@
-// import App from './components/App.js';
-// document.getElementById('root').appendChild(App());
-import thesimpsons from './data/thesimpsons/thesimpsons.js';
-
-//Duplicamos las cartas
-let dataCards = thesimpsons.items;
-dataCards = dataCards.concat(dataCards);
-
-//Aleatorizamos las cartas
-dataCards = dataCards.sort (() => {return Math.random()-0.5});
-console.log(dataCards);
+import {App} from './components/App.js'; //Importamos App
+document.getElementById('tableGame').appendChild(App()); //Incorporamos App dentro de "tableGame" que ya esta crEado en el HTML
 
 //Funcionalidad de btn "música de fondo"
 let etiquetaAudio = document.createElement("audio")
@@ -53,27 +44,13 @@ mostrarCards.addEventListener("click", () => {
     //Funcionalidad para capturar el nombre del usuario
     let username = document.getElementById("username").value;
     if (username === "") {
-    username = 'Desconocidx';
-}
+    username = "Desconocidx"; }
+
     //Funcionalidad para imprimir el nombre del usuario en la vista 3
     document.getElementById("W2").style.display = "none";
     document.getElementById("W3").style.display = "block";
     document.getElementById("personalised message").innerHTML = (username);
 
-    //Funcionalidad para imprimir el tablero de cartas en el DOM
-    const game = document.getElementById("tableGame");
-    for(let item of dataCards){
-        game.innerHTML += `
-        <div id='containerCard' class='containerCard' data-simpson='${item.id}'>
-            <div class= 'card back'>
-                <img src="${item.image}" class= "poster" alt="simpson"/>
-            </div>
-            <div class='card front'>
-                <img src="img/frontCard.png" class= "poster"/>
-            </div>
-        </div>
-        `;
-    }
 
     // Variables Globales
     var tarjetaVolteada = false;
@@ -81,15 +58,15 @@ mostrarCards.addEventListener("click", () => {
     var firstCard, secondCard;
     var couplesCounter = 0;
 
-    // Validar cards
+    // Función validar cards
     const tarjetas = document.querySelectorAll(".containerCard");
 
     function validarMatch(){
         let crearMatch = firstCard.dataset.simpson === secondCard.dataset.simpson
         if (crearMatch){
             couplesCounter += 1
-            firstCard.removeEventListener('click' , flipCard);
-            secondCard.removeEventListener('click' , flipCard);
+            firstCard.removeEventListener("click", flipCard);
+            secondCard.removeEventListener("click", flipCard);
 
             if (couplesCounter === 8){
 

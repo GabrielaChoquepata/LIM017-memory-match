@@ -1,4 +1,40 @@
-// import thesimpsons from './data/thesimpsons/thesimpsons.js';
+import thesimpsons from '../data/thesimpsons/thesimpsons.js';
+
+//Renombramos la variable de data
+let dataCards = thesimpsons.items;
+dataCards = dataCards.concat(dataCards); //Duplicamos la data de las cartas
+
+//Aleatorizamos la data de las cartas
+dataCards = dataCards.sort (() => {return Math.random()-0.5});
+console.log(dataCards);
+
+//Creamos las cartas
+const App = () => {
+      const el = document.createElement("section"); //Creamos una nueva sección
+      el.className = "memory-game"
+      el.contains = [] //La cual contendra
+      let memoryCards = [] //la variable que alojara las cartas
+      for(let item of dataCards){
+            memoryCards.push( `
+            <div id = "containerCard" class = "containerCard" data-simpson="${item.id}">
+                  <div class= "card back">
+                  <img src = "${item.image}" class = "poster" alt = "simpson"/>
+                  </div>
+                  <div class= "card front">
+                  <img src = "img/frontCard.png" class = "poster"/>
+                  </div>
+            </div>
+            `)
+
+            el.innerHTML = memoryCards.join("") //Impriminos dentro de el <--- memoryCards
+      }
+      return el
+}
+
+App()
+
+export {App}
+
 
 // const App = () => {
 //   const el = document.createElement('div');
@@ -9,25 +45,5 @@
 //   return el;
 // };
 
-// function cargarCartas (){
-//     fetch('./data/pokemon/pokemon.json')
-//       .then(resp => resp.json())
-//       .then(resp => console.log (resp))
-// }
-
-// cargarCartas();
 
 // export default App;
-
-
-
-//   .then(resp => resp.json())
-//   .then(console.log)
-
-
-      // return `
-      // <div class="card" style="height:100px">
-      // <div class="face hide" id="flip-face_${cards.id}-1" pokemon-back-id="flip-back_${cards.id}-1"><img src="${cards.image}" height="100" alt="${cards.id}" /></div>
-      // <div class="back show" id="flip-back_${cards.id}-1" pokemon-face-id="flip-face_${cards.id}-1"><img src="img/card-back.png" height="100" /></div>
-      // </div>
-      // <br>
