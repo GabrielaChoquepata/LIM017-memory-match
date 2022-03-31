@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Think Big;
+    src: url ("Think Big.ttf") format ("truetype");
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -45,7 +50,6 @@ body{
 
 
 .logoB{
-    /* z-index: 2; */
     margin: auto;
     margin:5% 25% -10%;
 }
@@ -200,7 +204,6 @@ p{
 .containerCard {
     position: relative;
     border-radius: 8px;
-    /* overflow: hidden; */
     width: 70px;
     height: 70px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
@@ -208,27 +211,20 @@ p{
     transform-style: preserve-3d;
     transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
-    /* background-color: #fff; */
 }
 
 .card{
     position: absolute;
-    /* transform: rotateY(0deg); */
 }
 
 .front{
     pointer-events: none;
     backface-visibility: hidden;
     align-content: center;
-    /* background: rgba(255, 255, 255, 0.116); 
-    transform: rotateY(180deg);*/
 }
 
 .back{
-    /* position: absolute; */
     pointer-events: none;
-    /* backface-visibility: hidden; */
-    /* transform: rotateY(0deg); */
     align-content: center;
 }
 
@@ -331,18 +327,17 @@ h3{
         background: none;
     }
 
-    /* .logoC{
-        margin:38px 0px 8px 0px;
-    } */
+    .logoC{
+        width: 12%;
+        margin: 0% 0% 0% 17%;
+    }
 
     .user{
-        margin:38px 0px 8px 105px;
+        margin:38px 0px 8px 30%;
     }
 
     h2{
-        font-family: Think Big;
-        font-size: 16px;
-        text-align: center;
+        font-size: 18px;
     }
 
     #username{
@@ -356,12 +351,9 @@ h3{
     }
 
     .gameRulers{
-        background-color: white;
-        text-align: justify;
-        font-size: 11.7px;
-        padding:10px;
-        margin:15px;
-        border-radius: 15px
+        font-size: 15px;
+        padding: 8% 5%;
+        margin: -25% 5% 5% 60%;
     }
 }
 

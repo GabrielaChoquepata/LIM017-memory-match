@@ -1,4 +1,4 @@
-import App from './App.js';
+import {App} from './App.js';
 
 describe('App', () => {
   it('should render without crashing', () => {
@@ -11,8 +11,4 @@ describe('App', () => {
     const result = cards.querySelectorAll('.containerCard')
     expect(result.length).toBe(16);
   });
-
-
 });
-
-

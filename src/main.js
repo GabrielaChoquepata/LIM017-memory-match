@@ -1,5 +1,5 @@
 import {App} from './components/App.js'; //Importamos App
-document.getElementById('tableGame').appendChild(App()); //Incorporamos App dentro de "tableGame" que ya esta crEado en el HTML
+document.getElementById('tableGame').appendChild(App()); //Incorporamos App dentro de "tableGame" que ya esta creado en el HTML
 
 //Funcionalidad de btn "música de fondo"
 let etiquetaAudio = document.createElement("audio")

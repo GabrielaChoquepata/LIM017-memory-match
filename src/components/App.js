@@ -6,7 +6,7 @@ dataCards = dataCards.concat(dataCards); //Duplicamos la data de las cartas
 
 //Aleatorizamos la data de las cartas
 dataCards = dataCards.sort (() => {return Math.random()-0.5});
-console.log(dataCards);
+// console.log(dataCards);
 
 //Creamos las cartas
 const App = () => {
@@ -34,16 +34,3 @@ const App = () => {
 App()
 
 export {App}
-
-
-// const App = () => {
-//   const el = document.createElement('div');
-
-//   el.className = 'App';
-//   el.textContent = 'Hola mundo!';
-
-//   return el;
-// };
-
-
-// export default App;
